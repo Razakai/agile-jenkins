@@ -6,6 +6,9 @@ pipeline {
 			steps {
 				echo 'Building...'
 				bat 'dir'
+				withPythonEnv('python') {
+    					bat 'python "hello world.py"'
+				}
 			}
 		}
 	
